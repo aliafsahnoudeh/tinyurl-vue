@@ -17,16 +17,18 @@ class ShortenerService {
     }
   }
   generateTinyUrl(original) {
-    if (!this.validatorService.isValidUrl(original)) {
-      return alert(`invalid url`);
-    }
-    let tinyUrl = "";
-    const allChars = statics.valid_chars;
-    for (var i = 0; i < statics.tiny_url_length; i++) {
-      tinyUrl += allChars[Math.floor(Math.random() * allChars.length)];
-    }
-    this.saveGeneratedUrl(original, tinyUrl);
-    return tinyUrl;
+    return new Promise((resolve, reject) => {
+      if (!this.validatorService.isValidUrl(original)) {
+        return reject();
+      }
+      let tinyUrl = "";
+      const allChars = statics.valid_chars;
+      for (var i = 0; i < statics.tiny_url_length; i++) {
+        tinyUrl += allChars[Math.floor(Math.random() * allChars.length)];
+      }
+      this.saveGeneratedUrl(original, tinyUrl);
+      resolve(tinyUrl);
+    });
   }
   saveGeneratedUrl(original, tinyUrl) {
     try {

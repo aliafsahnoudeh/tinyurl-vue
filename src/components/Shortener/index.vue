@@ -9,10 +9,12 @@
 <script>
 import linkBox from "../LinkBox";
 import ShortenerService from "../../services/shortener.serivce";
+import notifications from "../../constants/notifications";
 
 export default {
   name: "Shortener",
   components: { linkBox },
+  notifications: notifications,
   data() {
     return {
       shortenerService: new ShortenerService(),
@@ -21,8 +23,14 @@ export default {
   },
   methods: {
     handleClick() {
-      this.shortenerService.generateTinyUrl(this.url);
-      this.url = "";
+      this.shortenerService
+        .generateTinyUrl(this.url)
+        .then(() => {
+          this.url = "";
+        })
+        .catch(() => {
+          this.showInvalidUrl();
+        });
     }
   }
 };
