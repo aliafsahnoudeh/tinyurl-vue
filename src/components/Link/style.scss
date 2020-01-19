@@ -1,0 +1,16 @@
+@import '../../styles/variables.scss';
+
+.link-container {
+    width: 100%;
+}
+
+.link {
+    cursor: pointer;
+    height: 100%;
+    vertical-align: middle;
+    
+}
+
+.link:hover {
+    background-color: #80C862;
+}

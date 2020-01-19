@@ -1,0 +1,47 @@
+.recent-link-container {
+    width: 600px;
+}
+
+.table-container {
+    display: grid;
+    width: 100%;
+    justify-self: center;
+    margin-top: 10px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  table-layout:fixed;
+  margin-bottom: 30px;
+}
+  
+th, td {
+  padding: 10px;
+}
+
+td {
+    border-right: 1px solid lightgray;
+    word-wrap:break-word;
+    line-height: 20px;
+    height: 50px;
+}
+
+th {
+    background-color: #80C862;
+    color: white;
+}
+
+table, td, th {  
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th, td {
+    padding: 10px;
+}
+
+.link-cell:hover {
+    background-color: #80C862;
+}
+

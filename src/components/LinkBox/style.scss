@@ -1,0 +1,11 @@
+.link-box-container {
+    margin-top: 20px;
+}
+
+.your-url {
+    display: grid;
+    grid-template-columns: 80% 20%;
+    column-gap: 5px;
+    width: 600px;
+    margin-top: 10px;
+}

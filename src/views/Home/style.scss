@@ -1,0 +1,18 @@
+.home {
+    width: 100%;
+    height: 100%;
+    display : grid;
+    grid-template-rows: 3fr;
+    row-gap: 40px;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.header {
+    text-align: center;
+}
+
+.header-text {
+    float: none;
+    font-size: 25px;
+}
