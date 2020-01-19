@@ -38,6 +38,7 @@ class ShortenerService {
       this.storageService.saveNewUrl(tinyUrlObject, this.vueInstance);
     } catch (error) {
       // TODO proper error handeling
+      /* eslint-disable no-console */
       console.error(error);
     }
   }

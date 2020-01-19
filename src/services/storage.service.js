@@ -22,6 +22,7 @@ class StorageService {
       vueInstance.ls.set("urls", urls);
     } catch (error) {
       // TODO proper error handeling
+      /* eslint-disable no-console */
       console.error(error);
     }
   }
