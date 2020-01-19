@@ -21,5 +21,4 @@ This project generate and save urls in local storage, in real definatly it needs
 <br/>
 <br/>
 ### Dependencies:
-vue-ls https://github.com/RobinCK/vue-ls :
-For sharing generated urls between browser tabs.
+vue-ls (https://github.com/RobinCK/vue-ls): For sharing generated urls between browser tabs.
